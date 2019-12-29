@@ -2,7 +2,8 @@ language: java
 jdk:
 - openjdk8
 
-script: ./mvnw clean install
+install:
+- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 notifications:
   email: tanmoy.007ece@gmail.com
